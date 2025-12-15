@@ -25,6 +25,7 @@
             href=""
             class="block w-full mt-4 bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-xl shadow-lg transition-all text-center">
             🎁 Draw Receiver
+
         </a>
 
     </div>

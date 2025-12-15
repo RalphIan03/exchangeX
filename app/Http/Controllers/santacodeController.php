@@ -44,4 +44,8 @@ class santacodeController extends Controller
         $request->session()->forget(['santa.access_granted', 'santa.granted_at', 'santa.expires_at']);
         return redirect()->route('santa.show');
     }
+
+    public function index(){
+        return view('code');
+    }
 }

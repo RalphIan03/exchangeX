@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class participants extends Model
 {
-    protected $fillable = ['name', 'status','wishlist', 'pickedby'];
+    protected $fillable = ['username', 'name', 'status','wishlist', 'pickedby'];
 
     /** @use HasFactory<\Database\Factories\ParticipantsFactory> */
     use HasFactory;

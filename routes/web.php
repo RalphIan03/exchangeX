@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('landing');
 });
 
-Route::get('/code', function(){
+Route::get('/code', function () {
     return view('code');
 });
 Route::post('santacode/verify', [santacodeController::class, 'checkCode'])->name('santa.verify');
@@ -16,12 +16,14 @@ Route::post('santacode/verify', [santacodeController::class, 'checkCode'])->name
 
 
 
-Route::middleware(['santa.access'])->group(function(){
-    
+Route::middleware(['santa.access'])->group(function () {
+    Route::get('/monitoring', [participantsController::class, 'index'])->name('monitoring');
 });
-Route::get('/monitoring', [participantsController::class, 'index'])->name('monitoring');
+
+ Route::get('/entercode', [santacodeController::class, 'index'])->name('santa.show');
+
 
 Route::post('/create', [participantsController::class, 'create'])->name('part.create');
-Route::get('createEntry', function(){
+Route::get('createEntry', function () {
     return view('welcome');
 })->name('createEntry');

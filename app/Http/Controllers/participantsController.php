@@ -15,12 +15,13 @@ class participantsController extends Controller
 
     function create(Request $values){
         $validated = $values->validate([
+            'username' =>'required',
             'name' => 'required',
             'status'=> 'required|integer|min:0|max:1',
             'wishlist' => 'required'
         ]);
         participants::create($validated);
 
-        return redirect()->route('monitoring');
+        return redirect('/');
     }
 }
