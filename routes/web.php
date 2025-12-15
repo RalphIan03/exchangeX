@@ -11,7 +11,8 @@ Route::get('/', function () {
 Route::get('/code', function () {
     return view('code');
 });
-Route::post('santacode/verify', [santacodeController::class, 'checkCode'])->name('santa.verify');
+Route::post('santacode/verify', [santacodeController::class, 'verify'])->name('santa.verify');
+Route::post('/santa/logout', [santacodeController::class, 'logout'])->name('santa.logout');
 
 
 

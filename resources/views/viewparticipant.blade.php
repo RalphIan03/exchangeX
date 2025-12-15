@@ -71,7 +71,10 @@
             </table>
             {{$participants->appends(request()->query())->links() }}
         </div>
-
+        <form action="{{ route('santa.logout') }}" method="POST" class="mt-3">
+            @csrf
+            <button type="submit" class="w-full text-sm text-gray-600">Leave / Clear Access</button>
+        </form>
         <!-- Next Button -->
 
     </div>

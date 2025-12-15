@@ -10,7 +10,7 @@ class santacodeController extends Controller
 {
     protected $lifetime = 30;
 
-    function checkCode(Request $request)
+    function verify(Request $request)
     {
         $request->validate([
             'code' => 'required|string'
